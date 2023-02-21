@@ -25,6 +25,12 @@ public class Main {
     return sameArray;
   }
 
+  public static double [][] copyRagged(double [][] ragged){
+    double [][] sameArray = new double[ragged.length][ragged.length];
+    
+  }
+
+
 
   public static void main(String[] args) {
     double[][] orig = new double[][]{{1,2,3,3},{4,5,6,6},{7,8,9,9}};
