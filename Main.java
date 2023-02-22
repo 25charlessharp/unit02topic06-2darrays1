@@ -26,15 +26,23 @@ public class Main {
   }
 
   public static double [][] copyRagged(double [][] ragged){
-    double [][] sameArray = new double[ragged.length][ragged.length];
+    double [][] sameArray = new double[ragged.length][];
+    for(int r = 0; r < ragged.length; r ++){
+      sameArray[r] = new double[ragged[r].length];
+      for(int c = 0; c < ragged[r].length;c++){
+        sameArray[r][c] = ragged[r][c];
+      }
+    }
+    
+    return sameArray;
     
   }
 
 
 
   public static void main(String[] args) {
-    double[][] orig = new double[][]{{1,2,3,3},{4,5,6,6},{7,8,9,9}};
-    double[][] newArr = copyRectangle(orig);
+    double[][] orig = new double[][]{{1,2},{4,5,6,6},{7,8,9,9,8,9,9}};
+    double[][] newArr = copyRagged(orig);
     System.out.println(Arrays.deepToString(newArr));
   }
 }
