@@ -1,6 +1,7 @@
 import java.util.Arrays;
 public class Main {
   public static double [][] copySquare(double [][] square){
+    // FIXME: don't hard-code the size of the array.... get it from the input
     int size = 3;
 
     double[][] sameArray = new double[size][size];
@@ -14,6 +15,7 @@ public class Main {
 
 
   public static double [][] copyRectangle(double [][] rectangle){
+    // FIXME: don't hard-code the size of the array.... get it from the input
     int length = 4;
     int hight = 3;
     double [][] sameArray = new double[hight][length];
@@ -25,6 +27,7 @@ public class Main {
     return sameArray;
   }
 
+  // good
   public static double [][] copyRagged(double [][] ragged){
     double [][] sameArray = new double[ragged.length][];
     for(int r = 0; r < ragged.length; r ++){
@@ -38,6 +41,7 @@ public class Main {
     
   }
 
+  // TODO: implement withWeightedAverage
 
 
   public static void main(String[] args) {
