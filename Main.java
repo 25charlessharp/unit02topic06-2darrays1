@@ -38,11 +38,42 @@ public class Main {
     
   }
 
+  public static void printTranspose(double [][] reverse){
+    int origRows = reverse.length;
+    int origColls = reverse[0].length;
+    double [][] reverseArray = new double [origColls][origRows];
+    for(int c = 0; c < origColls; c ++){
+      for(int r = 0; r < origRows; r ++){
+        reverseArray[c][r] = reverse[r][c];
+      }
+    }
+    for(int r = 0; r < origColls; r ++){
+      for(int c = 0; c < origRows; c ++ ){
+        System.out.print(reverse[c][r] + " ");
+      }
+      System.out.println();
+    }
+    
+  }
+
 
 
   public static void main(String[] args) {
-    double[][] orig = new double[][]{{1,2},{4,5,6,6},{7,8,9,9,8,9,9}};
-    double[][] newArr = copyRagged(orig);
+    double[][] orig = new double[][]{
+    {99, 85, 98},
+    {98, 57, 79},
+    {92, 77, 74},
+    {94, 62, 81},
+    {99, 94, 92},
+    {80, 76.5, 67},
+    {76, 58.5, 90.5},
+    {92, 66, 91},
+    {77, 70.5, 66.5},
+    {89, 89.5, 81}
+    };
+    
+    double[][] newArr = (orig);
     System.out.println(Arrays.deepToString(newArr));
+    printTranspose(orig);
   }
 }
