@@ -2,7 +2,7 @@ import java.util.Arrays;
 public class Main {
   public static double [][] copySquare(double [][] square){
     // FIXME: don't hard-code the size of the array.... get it from the input
-    int size = 3;
+    int size = square.length;
 
     double[][] sameArray = new double[size][size];
     for(int r = 0; r < size; r ++){
@@ -16,8 +16,8 @@ public class Main {
 
   public static double [][] copyRectangle(double [][] rectangle){
     // FIXME: don't hard-code the size of the array.... get it from the input
-    int length = 4;
-    int hight = 3;
+    int length = rectangle.length;
+    int hight = rectangle[0].length;
     double [][] sameArray = new double[hight][length];
     for(int r = 0; r < hight; r ++){
       for(int c = 0; c < length; c ++){
