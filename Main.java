@@ -77,8 +77,8 @@ public class Main {
     }
 
     for(int c = 0; c < newColls; c++){
-      for(int r = 0; r < newRows -1; r++){
-        if(newRows - 2 == r){
+      for(int r = 0; r < newRows; r++){
+        if(newRows - 1 == r){
           average[newRows-1][c] = addColls/grades.length;
           addColls = 0.0;
         }
